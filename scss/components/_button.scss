@@ -1,0 +1,66 @@
+.btn{
+    width: 16rem;
+    height: 4rem;
+    text-decoration: none;
+    position: relative;
+    @include flexPosition(space-around);
+    
+    &:hover .btn-bg{
+        width: 18rem;
+    }
+    
+    &:hover .btn-text{
+        z-index:120;
+    }
+    &:hover .arrow{
+        transform: translateX(1rem);
+    }
+    
+    &:hover .arrow-line{
+        width: 2rem;
+    }
+    
+    &-bg{
+        width: 4rem;
+        height: 4rem;
+        background-color: color(quarternary);
+        border-radius: 5rem;
+        position: absolute;
+        left:0;
+        transition: width .2s;
+    }
+    &-text{
+        font-size: size(xs);
+        color:color(primary);
+        text-transform: uppercase;
+    }
+    
+    .arrow{
+        @include flexPosition;
+        transition: transform .2s;
+        
+        &-line{
+            height: .2rem;
+            background-color: color(primary);
+            position: absolute;
+            transform-origin: right;
+        }
+        
+        &-line-1{
+            width: 0;
+            transform: translateX(-.7rem);
+            transition: width .2s;
+        }
+        
+        &-line-2{
+            width: 1rem;
+            transform: rotate(45deg);
+        }
+        
+        &-line-3{
+            width: 1rem;
+          transform: rotate(-45deg); 
+
+        } 
+    }
+}

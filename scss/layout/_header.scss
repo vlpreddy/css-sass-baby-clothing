@@ -1,0 +1,10 @@
+.header{
+    // here -1 will span all the other columns starting from mentionedbelow(1)
+    grid-column:1 / -1;
+    grid-row:1 / 2;
+    display: grid;
+    grid-template-columns:1fr repeat(7, minmax(min-content, 16rem)) 1fr;
+    grid-tempate-rows:repeat(3, min-content);
+    grid-gap:3rem;
+    z-index:100;
+} 
